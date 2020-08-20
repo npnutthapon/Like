@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Nut Nutthapon Pandeang</h1>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators" >
       <li data-target="#myCarousel" data-slide-to="0" class=""></li>
@@ -20,7 +21,7 @@
   </div>
     <HelloWorld msg="" />
     <div class="row">
-      <div class="col-4">
+      <div class="col-12">
         <!-- 2.รับค่าจาก emit @cc แล้วส่งไปทำงานใน function "sum"-->
         <like label="" @cc = "sum" />
       </div>
@@ -37,26 +38,24 @@ export default {
     HelloWorld,
     Like,
   },
-  methods:{
-    ResetFunction: function () {
-      this.counter = 0;
-      this.$emit("cc", this.counter);
-    },
     props: {
     label: String
   },
 }
-}
+
 
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Do Hyeon', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   margin-top: 60px;
+}
+body{
+  background-image: url("./assets/BG02.png");
 }
 </style>
