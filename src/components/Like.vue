@@ -1,14 +1,6 @@
 <template>
   <div id="example-1">
     <!--<button @click="upFunction()" class="btn btn-info">{{label}}</button>-->
-    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev" v-on:click="ResetFunction">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next" v-on:click="ResetFunction">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
     <button @click="LikeFunction()" class="btn btn-info">
       <i class='far fa-smile-wink' style='font-size:28px;color:black'></i>
     </button>
@@ -35,9 +27,7 @@
 export default {
   data: function () {
     return {
-      img :[{},{},{}],
       counter: 0,
-      fsize:50,
     }
   },
   methods:{
@@ -73,7 +63,7 @@ export default {
     },
     sum(counterValue){
       this.total += counterValue
-    }
+    },
   },
   props: {
     label: String

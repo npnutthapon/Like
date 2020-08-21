@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <h1>Nut Nutthapon Pandeang</h1>
+    <div class="container">
+    <h1>Anime Photo!</h1>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators" >
       <li data-target="#myCarousel" data-slide-to="0" class=""></li>
@@ -9,40 +10,87 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item">
-        <img src="./assets/P1.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" alt="" srcset="" aria-label="Placeholder: 500x500">
+        <img :src="img[0].src" class="img-fluid" />
       </div>
       <div class="carousel-item active">
-        <img src="./assets/P2.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" alt="" srcset="" aria-label="Placeholder: 500x500">
+        <img :src="img[1].src" class="img-fluid" />
       </div>
       <div class="carousel-item">
-        <img src="./assets/P3.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" alt="" srcset="" aria-label="Placeholder: 500x500">
+        <img :src="img[2].src" class="img-fluid" />
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <!-- 2.รับค่าจาก emit @cc แล้วส่งไปทำงานใน function "sum"-->
+        <like label="" @cc = "sum" />
+      </div>
+      <div class="col-6">
+        <img :src="img[0].src" class="img-fluid" />
       </div>
     </div>
   </div>
-    <HelloWorld msg="" />
+  <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-6">
+        <img :src="img[1].src" class="img-fluid" />
+      </div>
+      <div class="col-6">
         <!-- 2.รับค่าจาก emit @cc แล้วส่งไปทำงานใน function "sum"-->
         <like label="" @cc = "sum" />
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <!-- 2.รับค่าจาก emit @cc แล้วส่งไปทำงานใน function "sum"-->
+        <like label="" @cc = "sum" />
+      </div>
+      <div class="col-6">
+        <img :src="img[2].src" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import Like from "./components/Like.vue";
+
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-    Like,
+  components: {Like },
+  data: function () {
+    return {
+      img: [
+        {
+          src:
+            "https://media.discordapp.net/attachments/746260527235334237/746260640720617492/01.jpg",
+        },
+        {
+          src:
+            "https://media.discordapp.net/attachments/746260527235334237/746260635523874866/03.jpg",
+        },
+        {
+          src:
+            "https://media.discordapp.net/attachments/746260527235334237/746260633690832966/02.jpg",
+        },
+      ],
+    };
   },
-    props: {
-    label: String
-  },
-}
-
+};
+   
 
 </script>
 
