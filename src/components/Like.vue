@@ -1,25 +1,25 @@
 <template>
   <div id="example-1">
     <!--<button @click="upFunction()" class="btn btn-info">{{label}}</button>-->
+    <p v-bind:style="{fontSize: fsize + 'px' }"> Score : {{ counter }} </p>
     <button @click="LikeFunction()" class="btn btn-info">
-      <i class='far fa-smile-wink' style='font-size:28px;color:black'></i>
+      <i class='far fa-smile-wink' style='color:black' ></i>
     </button>
     <button @click="LoveFunction()" class="btn btn-danger">
-      <i class='far fa-kiss-wink-heart' style='font-size:28px;color:black'></i>
+      <i class='far fa-kiss-wink-heart' style='color:black' ></i>
       </button>
     <button @click="HahaFunction()" class="btn btn-warning">
-      <i class='far fa-laugh-beam' style='font-size:28px;color:Black'></i>
+      <i class='far fa-laugh-squint' style='color:black'></i>
     </button>
     <button @click="WowFunction()" class="btn btn-success">
-      <i class='far fa-dizzy' style='font-size:28px;color:black'></i>
+      <i class='far fa-dizzy' style='color:black' ></i>
       </button>
     <button @click="SadFunction()" class="btn btn-info">
-      <i class='far fa-sad-cry' style='font-size:28px;color:black'></i>
+      <i class='far fa-sad-cry' style='color:black' ></i>
       </button>
     <button @click="AngryFunction()" class="btn btn-danger">
-      <i class='far fa-grimace' style='font-size:28px;color:black'></i>
+      <i class='far fa-grimace' style='color:black' ></i>
       </button>
-    <p v-bind:style="{fontSize: fsize + 'px' }"> {{ counter }} </p>
   </div>
 </template>
 
